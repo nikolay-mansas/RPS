@@ -6,9 +6,9 @@ Used: WebSocket(FastApi), Redis, WebSocket-Client and Uvicorn. Written in ~4 hou
 
 * Installation:
 
-* * [Client](https://github.com/nikolay-mansas/RPS/docs/install_client.md)
+* * [Client](https://github.com/nikolay-mansas/RPS/blob/main/docs/install_client.md)
 
-* * [Server](https://github.com/nikolay-mansas/RPS/docs/install_server.md)
+* * [Server](https://github.com/nikolay-mansas/RPS/blob/main/docs/install_server.md)
 
 
 # Preview
