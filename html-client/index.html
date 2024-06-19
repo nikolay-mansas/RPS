@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Rock Paper Scissors Game</h1>
+        <div id="login-screen">
+            <input type="text" id="username" placeholder="Enter your username (min 4 characters)">
+            <button id="login-button">Login</button>
+            <p id="login-error" class="error-message"></p>
+        </div>
+        <div id="lobby-screen" class="hidden">
+            <button id="create-lobby-button">Create Lobby</button>
+            <input type="text" id="lobby-id-input" placeholder="Enter Lobby ID">
+            <button id="join-lobby-button">Join Lobby</button>
+            <p id="lobby-error" class="error-message"></p>
+        </div>
+        <div id="game-screen" class="hidden">
+            <h2>Lobby ID: <span id="lobby-id" style="color: rgb(41, 40, 40)"></span></h2>
+            <p>Your move:</p>
+            <div id="move-buttons">
+                <button class="move-button" data-move="rock">Rock</button>
+                <button class="move-button" data-move="paper">Paper</button>
+                <button class="move-button" data-move="scissors">Scissors</button>
+            </div>
+            <p id="status-message"></p>
+            <p id="move-error" class="error-message"></p>
+        </div>
+    </div>
+    <script src="app.js"></script>
+    <script>
+        document.getElementById('lobby-id').addEventListener('click', function() {
+            const text = this.innerText;
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+            this.style.color = 'rgb(88, 88, 88)';
+            setTimeout(() => {
+                this.style.color = 'rgb(41, 40, 40)';
+            }, 500);
+        }   );
+    </script>
+</body>
+</html>
